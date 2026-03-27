@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="HTMX + Go + Echo + PostgreSQL" width="100%">
+  <img src="assets/banner.png" alt="HTMX + Go + PostgreSQL Railway Template" width="100%">
 </p>
 
 <p align="center">
