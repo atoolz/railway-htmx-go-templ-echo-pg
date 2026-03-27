@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://railway.com/deploy/htmx-go-echo-pg">
+  <a href="https://railway.com/deploy/htmx-go-postgresql-starter-kit">
     <img src="https://railway.com/button.svg" alt="Deploy on Railway">
   </a>
 </p>
@@ -21,6 +21,40 @@
   <img src="https://img.shields.io/badge/Echo-v4.15-00c9a7?style=flat-square" alt="Echo v4.15">
   <img src="https://img.shields.io/badge/PostgreSQL-16-336791?style=flat-square" alt="PostgreSQL">
 </p>
+
+<br>
+
+## Deploy and Host HTMX + Go + PostgreSQL Starter on Railway
+
+HTMX + Go + PostgreSQL Starter is a production-ready template for building hypermedia-driven web applications. It combines HTMX for dynamic interactions without JavaScript, Go with Echo and Templ for type-safe server-side rendering, and PostgreSQL for persistent storage. Deploy in one click and start building.
+
+### About Hosting HTMX + Go + PostgreSQL Starter
+
+The template deploys as a single Go binary built via multi-stage Dockerfile (~15MB final image, ~31s build time). It connects to a PostgreSQL instance over Railway's private network using the pgx driver with connection pooling. Database migrations run automatically on startup, creating the required tables without manual SQL. The application reads `DATABASE_URL` from environment variables and listens on the port assigned by Railway. A health check endpoint at `/health` pings the database and returns status, ensuring Railway can verify deployments before routing traffic. Tailwind CSS and HTMX load via CDN, so there is no frontend build step.
+
+### Common Use Cases
+
+- Rapid prototyping of server-rendered web apps that need dynamic interactions without the complexity of React, Vue, or other JavaScript frameworks
+- Building internal tools, admin panels, and CRUD dashboards where Go's performance and type safety matter but a full SPA is overkill
+- Learning HTMX patterns (hx-get, hx-post, hx-swap, hx-target) with a working reference application backed by a real database
+
+### Dependencies for Hosting
+
+- A Railway PostgreSQL database instance (added via the Railway dashboard or CLI)
+- The `DATABASE_URL` environment variable set to `${{Postgres.DATABASE_URL}}` on the web service
+
+#### Deployment Dependencies
+
+- [HTMX documentation](https://htmx.org/docs/)
+- [Go Echo framework](https://echo.labstack.com/docs)
+- [Templ templating](https://templ.guide)
+- [pgx PostgreSQL driver](https://github.com/jackc/pgx)
+
+### Why Deploy on Railway?
+
+Railway is a singular platform to deploy your infrastructure stack. Railway will host your infrastructure so you don't have to deal with configuration, while allowing you to vertically and horizontally scale it.
+
+By deploying HTMX + Go + PostgreSQL Starter on Railway, you are one step closer to supporting a complete full-stack application with minimal burden. Host your servers, databases, AI agents, and more on Railway.
 
 <br>
 
